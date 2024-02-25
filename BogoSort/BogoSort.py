@@ -1,24 +1,15 @@
 import random
 
-def bogoSort(a):
-    while (is_sorted(a) == False):
-        shuffle(a)
+def is_sorted(data):
+    for i in range(len(data) - 1):
+        if data[i] > data[i + 1]:
+            return False
+    return True
 
-def is_sorted(a):
-	n = len(a)
-	for i in range(0, n-1):
-		if (a[i] > a[i+1]):
-			return False
-	return True
+def bogosort(data):
+    while not is_sorted(data):
+        random.shuffle(data)
 
-def shuffle(a):
-    n = len(a)
-    for i in range(0, n):
-        r = random.randint(0, n-1)
-        a[i], a[r] = a[r], a[i]
-
-a = [3, 2, 4, 1, 0, 5]
-bogoSort(a)
-print("Sorted array :")
-print(a)
-
+data = [34,23,122,9]
+bogosort(data)
+print(data)
