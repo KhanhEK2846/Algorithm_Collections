@@ -1,0 +1,1 @@
+The idea: delete every odd element

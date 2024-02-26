@@ -1,0 +1,1 @@
+The idea: to exploit the concept of place value. It assumes that sorting numbers digit by digit will eventually result in a fully sorted list

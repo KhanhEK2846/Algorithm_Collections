@@ -1,0 +1,1 @@
+The Idea:  The idea is to push the elements at the start of the array whenever it is less than the previous element. Repeat this step until there is no such element that is not in the correct order.
