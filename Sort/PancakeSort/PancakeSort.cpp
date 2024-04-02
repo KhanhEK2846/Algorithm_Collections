@@ -3,22 +3,14 @@
 using namespace std;
 
 
-void ReverseArr(int * arr,int last ,int where = -1){
-    if(where != -1){
-        for(int i=0; i<=where/2; i++)
-        {
-            int tmp = arr[i];
-            arr[i] = arr[where-i];
-            arr[where-i] = tmp;
-        }
-    }else{
-        for(int i=0; i<=last/2; i++)
-        {
-            int tmp = arr[i];
-            arr[i] = arr[last-i];
-            arr[last-i] = tmp;
-        }
+void ReverseArr(int * arr,int where){
+    for(int i=0; i<=where/2; i++)
+    {
+        int tmp = arr[i];
+        arr[i] = arr[where-i];
+        arr[where-i] = tmp;
     }
+    
 }
 
 void PancakeSort(int * arr){
@@ -29,7 +21,7 @@ void PancakeSort(int * arr){
             if(arr[max_id] < arr[i])
                 max_id = i;
         }
-        ReverseArr(arr,j,max_id);
+        ReverseArr(arr,max_id);
         ReverseArr(arr,j);
     }
 }
